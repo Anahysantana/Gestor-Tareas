@@ -35,3 +35,51 @@ gestor-tareas/
 - **Listar tareas**: Muestra todas las tareas registradas.
 - **Eliminar tarea**: Elimina una tarea seleccionada por el usuario.
 - **Menú interactivo**: Navegación sencilla mediante opciones numeradas.
+
+- def agregar_tarea():
+    tarea = input("Ingrese una nueva tarea: ")
+    tareas.append(tarea)
+    print("Tarea agregada correctamente.")
+
+def listar_tareas():
+    if not tareas:
+        print("No hay tareas registradas.")
+    else:
+        for i, tarea in enumerate(tareas, 1):
+            print(f"{i}. {tarea}")
+
+def eliminar_tarea():
+    listar_tareas()
+    try:
+        indice = int(input("Ingrese el número de la tarea a eliminar: "))
+        if 0 < indice <= len(tareas):
+            tareas.pop(indice - 1)
+            print("Tarea eliminada correctamente.")
+        else:
+            print("Número de tarea inválido.")
+    except ValueError:
+        print("Entrada no válida.")
+
+def menu():
+    while True:
+        print("\nGestor de Tareas")
+        print("1. Agregar Tarea")
+        print("2. Listar Tareas")
+        print("3. Eliminar Tarea")
+        print("4. Salir")
+        opcion = input("Seleccione una opción: ")
+        
+        if opcion == "1":
+            agregar_tarea()
+        elif opcion == "2":
+            listar_tareas()
+        elif opcion == "3":
+            eliminar_tarea()
+        elif opcion == "4":
+            break
+        else:
+            print("Opción inválida.")
+
+if __name__ == "__main__":
+    menu()
+
