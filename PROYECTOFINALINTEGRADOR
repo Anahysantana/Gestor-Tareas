@@ -1,0 +1,60 @@
+# El impacto de las nuevas tecnologías en la sociedad: visualización del futuro
+
+## Objetivo
+Analizar cómo las nuevas tecnologías afectan la sociedad y generar un simulador educativo que permita visualizar posibles escenarios futuros en distintos ámbitos (educación, comunicación, salud y transporte).
+
+## Integrantes
+-   Monica Julissa Santana Bravo 
+corre: anahysantana02@gmail.com
+
+## Funcionalidades del Software
+- Registro de usuarios: nombre, edad y acceso a internet.
+- Cálculo del promedio de edad de los usuarios.
+- Estadísticas de acceso a internet.
+- Menú interactivo y fácil de usar.
+- Modularización mediante funciones.
+- Uso de condicionales y bucles.
+- Complemento opcional de programación funcional (map, filter, lambda).
+
+## Cronograma de desarrollo
+| Semana | Actividad |
+|--------|-----------|
+| 1      | Introducción a la resolución de problemas y definición del proyecto |
+| 2      | Configuración del entorno de programación y depuración inicial |
+| 3      | Implementación de condicionales en el software |
+| 4      | Creación de bucles para recorrer listas y generar estadísticas |
+| 5      | Desarrollo de funciones para modularizar el programa |
+| 6      | Elaboración de diagramas funcionales y de arquitectura |
+| 7      | Codificación y pruebas del software |
+| 8      | Integración final, documentación y presentación del proyecto |
+
+## Estructura del repositorio
+Proyecto-Integrador/
+└── README.md # Explicación general del proyecto
+
+markdown
+Copiar
+Editar
+
+## Integración de Unidades
+1. **Unidad 1 – Resolución de Problemas**  
+   - Identificación del problema social y tecnológico.  
+   - Aplicación de los pasos de resolución de problemas.
+
+2. **Unidad 2 – Entorno de Programación**  
+   - Configuración del entorno Python/IDE.  
+   - Pruebas y depuración del código.
+
+3. **Unidad 3 – Condicionales y Bucles**  
+   - Validación de opciones del menú (condicionales).  
+   - Iteración sobre lista de usuarios para cálculos y estadísticas (bucles).
+
+4. **Unidad 4 – Funciones**  
+   - Modularización del programa con funciones específicas.  
+   - Funciones: registrar usuario, calcular promedio de edad, mostrar estadísticas.
+
+## Programación Funcional (Complemento Opcional)
+```python
+# Ejemplo de programación funcional
+usuarios_con_internet = list(filter(lambda u: u["internet"].lower() == "si", usuarios))
+promedio_edad = sum(map(lambda u: u["edad"], usuarios)) / len(usuarios)
